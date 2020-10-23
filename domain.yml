@@ -1,0 +1,41 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - ask_weather
+  - bot_challenge
+
+actions:
+  - action_ask_weather
+
+responses:
+  utter_greet:
+  - text: "Hola! Soy un asistente virtual para informarte del clima y la temperatura en provincias de Argentina."
+
+  utter_did_that_help:
+  - text: "Te sirvió?"
+
+  utter_happy:
+  - text: "Genial, cuidate! 😉"
+
+  utter_goodbye:
+  - text: "Adios! 👋"
+
+  utter_iamabot:
+  - text: "Soy un bot, powered by Rasa! 😎"
+
+  utter_denada:
+  - text: "De nada!"
+
+entities:
+- provincia
+
+slots:
+  provincia:
+    type: unfeaturized
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
